@@ -71,7 +71,7 @@ class EmergencyScanner {
                     name: "John Doe",
                     emergency_contact: "+1234567890",
                     medical_info: "No known allergies",
-                    vehicle: "Tesla Model 3 - ABC123"
+                    vehicle: "16/04/2004"
                 });
             }, 1000);
         });
@@ -100,8 +100,8 @@ class EmergencyScanner {
                     <p>${data.medical_info}</p>
                 </div>
                 <div class="info-section">
-                    <h3>Vehicle Information</h3>
-                    <p>${data.vehicle}</p>
+                    <h3>dob</h3>
+                    <p>${data.dob}</p>
                 </div>
                 <button onclick="emergencyScanner.callEmergencyServices()">
                     Call Emergency Services (911)

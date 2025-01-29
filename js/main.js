@@ -1,4 +1,6 @@
 // Navigation and UI Interactions
+// Initialize Auth
+const auth = new Auth();
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');

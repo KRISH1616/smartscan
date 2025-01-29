@@ -1,4 +1,3 @@
-<!-- emergency-scanner.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency QR Scanner</title>
     <script src="https://unpkg.com/html5-qrcode"></script>
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scanner-styles.css">
 </head>
 <body>
     <div class="scanner-container">
         <h1>Emergency QR Scanner</h1>
-        <div id="reader"></div>
+        <div class="scanner-wrapper">
+            <div id="reader"></div>
+            <div id="scan-status">
+                <p>Position QR code within the frame</p>
+            </div>
+        </div>
         <div id="emergency-info" class="emergency-info"></div>
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Processing QR code...</p>
+        </div>
     </div>
     <script src="scanner.js"></script>
 </body>

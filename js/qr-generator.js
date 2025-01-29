@@ -36,18 +36,18 @@ class QRGenerator {
         });
     }
 
-    collectFormData() {
-        return {
-            name: document.getElementById('fullName').value,
-            contact: document.getElementById('contact').value,
-            emergencyContact: document.getElementById('emergencyContact').value,
-            medicalInfo: document.getElementById('medicalInfo').value,
-            insurance: document.getElementById('insurance').value,
-            vehicle: document.getElementById('vehicle').value,
-            timestamp: new Date().toISOString()
-        };
-    }
-
+// In qr-generator.js, update the collectFormData function
+collectFormData() {
+    return {
+        name: document.getElementById('fullName').value,
+        contact: document.getElementById('contact').value,
+        emergencyContact: document.getElementById('emergencyContact').value,
+        medicalInfo: document.getElementById('medicalInfo').value || '',
+        BloodGroup: document.getElementById('Blood Group').value || '',
+        dob: document.getElementById('dob').value,
+        timestamp: new Date().toISOString()
+    };
+}
     downloadQRCode() {
         if (!this.qrcode) return;
 
@@ -89,13 +89,13 @@ class QRGenerator {
                     </div>
                     
                     <div class="info-section">
-                        <h3>Insurance Details</h3>
-                        <p>${this.escapeHTML(data.insurance)}</p>
+                        <h3>Blood Group Details</h3>
+                        <p>${this.escapeHTML(data.BloodGroup)}</p>
                     </div>
                     
                     <div class="info-section">
-                        <h3>Vehicle Information</h3>
-                        <p>${this.escapeHTML(data.vehicle)}</p>
+                        <h3>dob</h3>
+                        <p>${this.escapeHTML(data.dob)}</p>
                     </div>
                     
                     <div class="info-footer">

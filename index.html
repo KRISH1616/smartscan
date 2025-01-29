@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Car Emergency QR System</title>
+    <title>RES-Q-SCAN</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/modal-styles.css">
+    <!-- Add this to the nav-links in index.html -->
+    <script src="js/auth.js"></script>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">Smart QR</div>
+            <!-- Add this to the nav-links in index.html -->
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#dashboard">Dashboard</a></li>
-                <li><a href="#about">About</a></li>
-                <li><button class="login-btn">Login</button></li>
+             <li><a href="#home">Home</a></li>
+             <li><a href="#dashboard">Dashboard</a></li>
+             <li><a href="#about">About</a></li>
+             <li><a href="emergency-scanner.html">Scanner</a></li>
+             <li><button class="login-btn">Login</button></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -26,12 +31,15 @@
             </div>
         </nav>
     </header>
-
+<!-- Add this to the dashboard section in index.html -->
+<div class="cta-buttons" style="margin-top: 20px;">
+    <a href="emergency-scanner.html" class="btn primary-btn">Open QR Scanner</a>
+</div>
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>Smart Car Emergency QR System</h1>
+                <h1>RES-Q-SCAN</h1>
                 <p>Your safety companion on the road</p>
                 <div class="cta-buttons">
                     <button class="btn primary-btn">Get Started</button>
@@ -63,12 +71,12 @@
                             <textarea id="medicalInfo"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="insurance">Insurance Details</label>
-                            <input type="text" id="insurance">
+                            <label for="Blood Group">Blood Group</label>
+                            <input type="text" id="Blood Group">
                         </div>
                         <div class="form-group">
-                            <label for="vehicle">Vehicle Information</label>
-                            <input type="text" id="vehicle" required>
+                            <label for="dob">Date Of Birth</label>
+                            <input type="text" id="dob" required>
                         </div>
                         <button type="submit" class="btn primary-btn">Generate QR Code</button>
                     </form>
@@ -85,7 +93,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h3>Smart Car QR</h3>
+                <h3>RES-Q-SCAN</h3>
                 <p>Making emergency response smarter and faster.</p>
             </div>
             <div class="footer-section">
@@ -98,8 +106,8 @@
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Email: support@smartcarqr.com</p>
-                <p>Phone: 1-800-SMART-QR</p>
+                <p>Email: support@RES-Q-SCAN.com</p>
+                <p>Phone: 9004312733</p>
             </div>
         </div>
         <div class="footer-bottom">
